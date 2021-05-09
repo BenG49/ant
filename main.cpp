@@ -74,35 +74,10 @@ void update()
         ++ant.x;
 }
 
-/*void draw(vec2i center, int squareCountY)
+void draw(vec2i center, int sqSize)
 {
-    int squareSize = floor(480.0f/squareCountY);
-
-    vec2i size = {
-        floor(640.0f/squareSize),
-        squareCountY
-    };
-
-    vec2i topLeft = {
-        center.x - floor(size.x / 2),
-        center.y - floor(size.y / 2)
-    };
-
-    for (auto it = tiles.begin(); it != tiles.end(); ++it)
-    {
-        vec2i temp = { it->x, it->y };
-        // draw
-        if (temp.within(topLeft, size))
-        {
-            
-        }
-    }
-}*/
-
-void d()
-{
+    vec2i size = { 600.f/sqSize, 600.0f/sqSize };
     vec2i topleft = { -10, -10 };
-    vec2i size = { 20, 20 };
     // 30
     RectangleShape sq(Vector2f(30, 30));
     sq.setFillColor(Color::Black);
@@ -131,7 +106,8 @@ int main()
                 win.close();
 
         win.clear(Color::White);
-        d();
+        // d();
+        draw(vec2i(5, 5), 11);
         win.display();
     }
 
